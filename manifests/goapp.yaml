@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goapp-deployment
+spec:
+  selector:
+    matchLabels:
+      app: goapp
+  template:
+    metadata:
+      labels:
+        app: goapp
+    spec:
+      containers:
+      - name: goapp
+        image: ghcr.io/qian-github-cloud/cicd-handson-2021-code/go-image:latest
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: dockerconfigjson-github-com
