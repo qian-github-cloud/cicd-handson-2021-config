@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: goapp
-        image: ghcr.io/qian-github-cloud/cicd-handson-2021-code/go-image:latest
+        image: ghcr.io/qian-github-cloud/cicd-handson-2021-code/go-image:13
         ports:
         - containerPort: 8080
       imagePullSecrets:
