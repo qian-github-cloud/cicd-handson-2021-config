@@ -17,11 +17,11 @@ spec:
         image: ghcr.io/qian-github-cloud/cicd-handson-2021-code/go-image:13
         resources:
           requests:
-            memory: "100Mi"
-            cpu: "100m"
+            memory: "90Mi"
+            cpu: "90m"
           limits:
-            memory: "100Mi"
-            cpu: "100m"
+            memory: "90Mi"
+            cpu: "90m"
         ports:
         - containerPort: 8080
       imagePullSecrets:
