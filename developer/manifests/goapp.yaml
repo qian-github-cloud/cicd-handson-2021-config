@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: goapp-deployment
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: goapp
@@ -15,6 +15,13 @@ spec:
       containers:
       - name: goapp
         image: ghcr.io/qian-github-cloud/cicd-handson-2021-code/go-image:13
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+          limits:
+            memory: "100Mi"
+            cpu: "100m"
         ports:
         - containerPort: 8080
       imagePullSecrets:
